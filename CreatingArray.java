@@ -1,4 +1,4 @@
-import java.lang.reflect.Array;
+
 import java.util.Arrays;// to display array
 public class CreatingArray {
     public static void main(String[] args) {
