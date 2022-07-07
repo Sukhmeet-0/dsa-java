@@ -1,3 +1,12 @@
+// creating a node
+
+class Node {
+    public int value;
+    public Node next;
+}
+
+// creating a single linked list
+
 public class SinglyLinkedList{
     public static Node head;
     public static Node tail;
@@ -39,5 +48,17 @@ public class SinglyLinkedList{
             node.next=nextNode;//---------------------->O(1)
         }
         size++;//---------------------->O(1)
+    }
+
+    // main function
+
+    
+    public static void main(String[] args) {
+        // SinglyLinkedList s=new SinglyLinkedList();
+        createSingleLinkedList(5);
+        System.out.println(SinglyLinkedList.head.value);
+        Insert(6, 1);
+        Insert(7, 3);
+        System.out.println(head.next.next.value);
     }
 }
