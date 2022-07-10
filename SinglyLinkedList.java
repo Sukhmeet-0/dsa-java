@@ -14,7 +14,7 @@ public class SinglyLinkedList{
     public static Node tail;
     public static int size;
 
-    public static Node createSingleLinkedList(int valueNode){
+    private static Node createSingleLinkedList(int valueNode){
         head=new Node();//---------------------->O(1)
         Node node=new Node();//---------------------->O(1)
         node.next=null;//---------------------->O(1)
@@ -25,7 +25,7 @@ public class SinglyLinkedList{
         return head;//---------------------->O(1)
     }
 
-    static void Insert(int nodeValue,int location){
+    private void Insert(int nodeValue,int location){
         Node node=new Node();//---------------------->O(1)
         node.value=nodeValue;//---------------------->O(1)
         if(head==null){//---------------------->O(1)
@@ -54,7 +54,7 @@ public class SinglyLinkedList{
 
     // traverse
 
-    static void travserseSingleLinkedList(){
+    private void travserseSingleLinkedList(){
         if(head==null){//------------------>O(1)
             System.out.println("Single Linked List doesnot exist");//------------------>O(1)
         }else{
@@ -71,7 +71,7 @@ public class SinglyLinkedList{
     }
 
     //search for a node
-    static boolean search(int value){//------------------>O(1)
+    private boolean search(int value){//------------------>O(1)
         if(head!=null){//------------------>O(1)
             Node tempNode=head;//------------------>O(1)
             for(int i=0;i<size;i++){//------------------>O(n)
@@ -87,7 +87,7 @@ public class SinglyLinkedList{
     }
 
     //delete node
-    static void delete(int location){//------------------>O(1)
+    private void delete(int location){//------------------>O(1)
         if(head==null){//------------------>O(1)
             System.out.println("single linked list does not exist!!");//------------------>O(1)
             return;//------------------>O(1)
@@ -125,7 +125,7 @@ public class SinglyLinkedList{
     }
 
     // delete entire single linked list
-    static void deleteEntirelist(){
+    void deleteEntirelist(){
         head =null;//------------------>O(1)
         tail=null;//------------------>O(1)
         System.out.println("Single linked list deleted successfully!!");//------------------>O(1)
@@ -134,20 +134,20 @@ public class SinglyLinkedList{
     // main function
 
     public static void main(String[] args) {
-        // SinglyLinkedList s=new SinglyLinkedList();
+        SinglyLinkedList s=new SinglyLinkedList();
         createSingleLinkedList(5);
         // System.out.println(SinglyLinkedList.head.value);
-        Insert(6, 1);
-        Insert(7, 3);
-        Insert(8, 4);
-        Insert(9, 0);
+        s.Insert(6, 1);
+        s.Insert(7, 3);
+        s.Insert(8, 4);
+        s.Insert(9, 0);
         // System.out.println(head.next.next.value);
-        travserseSingleLinkedList();
-        search(7);
-        delete(3);
-        travserseSingleLinkedList();
-        deleteEntirelist();
-        travserseSingleLinkedList();
+        s.travserseSingleLinkedList();
+        s.search(7);
+        s.delete(3);
+        s.travserseSingleLinkedList();
+        s.deleteEntirelist();
+        s.travserseSingleLinkedList();
     }
 
 }
