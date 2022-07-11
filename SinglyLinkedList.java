@@ -148,6 +148,7 @@ public class SinglyLinkedList{
         s.travserseSingleLinkedList();
         s.deleteEntirelist();
         s.travserseSingleLinkedList();
+        
     }
 
 }
