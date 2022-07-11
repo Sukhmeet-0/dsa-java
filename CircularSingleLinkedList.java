@@ -110,13 +110,13 @@ class createCircularLinkedList{
         }
     }
     void deleteEntire(){
-        if(head==null){
-            System.out.println("Circular single linked list doesnot exist !!");
+        if(head==null){//-------------->O(1)
+            System.out.println("Circular single linked list doesnot exist !!");//-------------->O(1)
         }else{
-            head=null;
-            tail.next=null;
-            tail=null;
-            System.out.println("Circular single linked list has been deleted !!");
+            head=null;//-------------->O(1)
+            tail.next=null;//-------------->O(1)
+            tail=null;//-------------->O(1)
+            System.out.println("Circular single linked list has been deleted !!");//-------------->O(1)
         }
     }
 }
